@@ -7,13 +7,15 @@ console.log('NODE_ENV='+process.env.NODE_ENV);
 var helmet = require('helmet');
 app.use(helmet());
 
-app.all('/', function(req, res) {
-	res.send('...');
-});
 app.all('/jason', function(req, res) {
 	console.log(req.path);
-	res.send('Jason index ...!!22233');
+	res.send('Jason index ');
 });
+
+var server = app.listen(port, function () {
+	console.log('Listening on port ' + port);
+});
+require('./socket/socket.js')(server);
 
 app.listen(port, function () {
 	console.log('Listening on port : ' + port);
