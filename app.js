@@ -17,7 +17,3 @@ var server = app.listen(port, function () {
 });
 require('./socket/socket.js')(server);
 
-app.listen(port, function () {
-	console.log('Listening on port : ' + port);
-});
-
