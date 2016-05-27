@@ -3,7 +3,7 @@
     "name" : "jason",
     "script" : "app.js",
     "watch" : true,
-    "ignore_watch" : ["node_modules", "dev", "public"],
+    "ignore_watch" : ["node_modules", "dev", "public", ".git", "Web.config"],
     "env": {
       "NODE_ENV": "development",
     }/*,
